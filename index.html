@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Maps Hackathon Starter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🗺️ Maps Hackathon Starter</h1>
+    <p>Click the map to drop a marker. Open <code>app.js</code> to build from here.</p>
+  </header>
+
+  <div id="map"></div>
+
+  <!--
+    IMPORTANT: Replace YOUR_API_KEY_HERE below with your actual API key.
+    Libraries loaded: "places" (for search/autocomplete) and "marker" (for advanced markers).
+    We're loading extra libraries now so you don't have to touch this line later
+    when you add search or routing features.
+  -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places,marker&callback=initMap&loading=async"
+    defer
+  ></script>
+  <script src="app.js"></script>
+</body>
+</html>

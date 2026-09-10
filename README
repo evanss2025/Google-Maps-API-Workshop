@@ -1,0 +1,54 @@
+# Google Maps Hackathon Starter
+
+A no-build-step starter (just HTML/CSS/JS) so you can focus on the Maps API
+itself instead of tooling.
+
+## Setup (do this before the workshop if you can)
+
+1. **Get an API key**
+   - Go to https://console.cloud.google.com/
+   - Create a project (or use an existing one)
+   - Enable these APIs: **Maps JavaScript API**, **Places API**, **Directions API**, **Geocoding API**, **Distance Matrix API**
+   - Go to "Credentials" → "Create Credentials" → "API key"
+   - Google gives new accounts a $200/month free credit, which is plenty for a hackathon
+
+2. **Restrict your key (recommended, takes 30 seconds)**
+   - In the credentials page, click your key → "Application restrictions" → "HTTP referrers"
+   - Add `http://localhost:*` and `http://127.0.0.1:*` so it only works from your machine during the workshop
+
+3. **Add the key to the project**
+   - Open `index.html`
+   - Replace `YOUR_API_KEY_HERE` with your actual key
+
+4. **Run it**
+   - You can't just double-click `index.html` (browsers block some Maps features on `file://` URLs)
+   - Easiest fix: run a tiny local server from this folder:
+     ```
+     # Python 3
+     python3 -m http.server 8000
+
+     # or, if you have Node
+     npx serve .
+     ```
+   - Then open `http://localhost:8000`
+
+## What's already built
+
+- A full-screen map
+- Click the map to drop a marker (click again elsewhere to move it)
+
+## What's not built (that's your job!)
+
+See the `TODO` comments at the bottom of `app.js` for pointers on:
+- Adding a Places search bar
+- Drawing routes with the Directions API
+- Distance Matrix for "nearest X" features
+- Custom map styling
+- Plotting a data set of multiple points / heatmaps
+
+## Useful docs
+
+- Maps JS API: https://developers.google.com/maps/documentation/javascript
+- Places API: https://developers.google.com/maps/documentation/places/web-service
+- Directions API: https://developers.google.com/maps/documentation/directions
+- Distance Matrix: https://developers.google.com/maps/documentation/distance-matrix
